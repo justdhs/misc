@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+import requests
+
+
+session = requests.Session()
+url = "${1:http://google.com}"
+
+r = session.get(url)
+response_get = r.text
+r = session.post(url, data={"${2:parameter}": "${3:value}"})
+response_post = r.text
+
+]]>
+</content>
+    <description>Python requests GET/POST</description>
+    <tabTrigger>reques</tabTrigger>
+    <scope>source.python</scope>
+</snippet>

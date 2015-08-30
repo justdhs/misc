@@ -1,0 +1,22 @@
+<snippet>
+    <content>
+<![CDATA[
+import socket
+
+ip = "${1:127.0.0.1}"
+port = ${2:80}
+buffer_size = 1024
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((ip, port))
+
+data = s.recv(buffer_size)
+
+s.send("${3:foo}" + "\n")
+
+]]>
+</content>
+    <description>Python sockets</description>
+    <tabTrigger>sock</tabTrigger>
+    <scope>source.python</scope>
+</snippet>
